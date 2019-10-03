@@ -7,6 +7,8 @@ import ReactLogo from "./components/reactLogo";
 import styled from "styled-components";
 import Header from "./components/Header";
 import HeaderTwo from "./components/HeaderTwo";
+import NeonGlow from "./components/NeonGlow";
+import NeonGlowAlternative from "./components/NeonGlowAlternative";
 
 const StyledApp = styled.div`
   display: flex;
@@ -18,8 +20,10 @@ class App extends Component {
   render() {
     return (
       <StyledApp>
-        <Header />
         <HeaderTwo />
+        <NeonGlow></NeonGlow>
+        <Header />
+        <NeonGlowAlternative />
       </StyledApp>
     );
   }

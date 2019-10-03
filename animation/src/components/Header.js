@@ -4,7 +4,7 @@ import styled from "styled-components";
 const StyledHeader = styled.header`
   z-index: 10;
   flex-shrink: 0;
-  font-size: 28px; /* looks shit */
+  font-size: 28px;
   align-items: center;
   background-color: ${props => props.theme.main};
   text-transform: uppercase;
