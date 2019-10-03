@@ -1,49 +1,27 @@
 import React, { useEffect, useRef } from "react";
+import { Component } from "react";
 import { TweenMax, Linear } from "gsap";
 import logo from "./logo.svg";
 import "./App.css";
+import ReactLogo from "./components/reactLogo";
+import styled from "styled-components";
+import Header from "./components/Header";
+import HeaderTwo from "./components/HeaderTwo";
 
-const App = () => {
-  let logoElement = useRef(null);
+const StyledApp = styled.div`
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+`;
 
-  useEffect(() => {
-    TweenMax.to(logoElement, 1, {
-      repeat: -1,
-      rotation: 360,
-      ease: Linear.easeNone
-    });
-  }, []);
-
-  function scaleUp() {
-    TweenMax.to(logoElement, 1, {
-      scale: 1.25,
-      ease: Linear.ease
-    });
+class App extends Component {
+  render() {
+    return (
+      <StyledApp>
+        <Header />
+        <HeaderTwo />
+      </StyledApp>
+    );
   }
-
-  function scaleDown() {
-    TweenMax.to(logoElement, 1, {
-      scale: 0.75
-    });
-  }
-
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img
-          src={logo}
-          onMouseEnter={scaleUp}
-          onMouseLeave={scaleDown}
-          ref={element => {
-            logoElement = element;
-          }}
-          className="App-logo"
-          alt="logo"
-        />
-        <p>React + GSAP animation</p>
-      </header>
-    </div>
-  );
-};
-
+}
 export default App;
