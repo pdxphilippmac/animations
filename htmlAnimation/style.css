@@ -27,6 +27,18 @@ body {
   left: 50%;
   transform: translate(-50%);
 }
+#logo3 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-60%, -90%);
+}
+#logo4 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-60%, -90%);
+}
 
 #logo path:nth-child(1) {
   stroke-dasharray: 2px;
