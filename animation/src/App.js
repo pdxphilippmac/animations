@@ -19,7 +19,9 @@ const StyledApp = styled.div`
 class App extends Component {
   render() {
     return (
+    
       <StyledApp>
+          <h1>Test</h1>
         <HeaderTwo />
         <NeonGlow></NeonGlow>
         <Header />
