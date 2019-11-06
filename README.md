@@ -1,2 +1,2 @@
-# animations
-animation testing
+# Animations
+Collection of different approaches on animations for React Apps
